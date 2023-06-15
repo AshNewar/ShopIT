@@ -11,6 +11,7 @@ import cookieParser from "cookie-parser";
 import { errorWares } from "./middlewares/error.js";
 import Razorpay from "razorpay";
 import { METHODS } from "http";
+import cors from "cors";
 
 dotenv.config();
 ConnectDB();
