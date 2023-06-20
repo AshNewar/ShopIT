@@ -83,7 +83,7 @@ export const paymentVerification = TryCatch(async (req, res, next) => {
 
   const word = razorpay_order_id + "|" + razorpay_payment_id;
   const generatedSign = crypto
-    .createHmac(sha256, process.env.RAZOR_SECRET)
+    .createHmac("sha256", process.env.RAZOR_SECRET)
     .update(word)
     .digest("hex");
 
