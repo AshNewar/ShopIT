@@ -23,7 +23,7 @@ const schema=mongoose.Schema({
     photoSrc:String,
     createdAt:{
         type:Date,
-        default:Date.no
+        default:Date.now,
     }
 
 });
