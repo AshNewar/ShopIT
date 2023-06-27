@@ -123,7 +123,6 @@ export const orderDetails = async (req, res, next) => {
     const order = await Order.findById(req.params.id).populate("user", "name");
 
     if (!order) return next(new ErrorHandler("Invalid OrderId", 401));
-    console.log(order);
 
     res.status(200).json({
       success: true,
