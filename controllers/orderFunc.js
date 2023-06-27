@@ -120,8 +120,9 @@ export const myOrder = TryCatch(async (req, res, next) => {
 
 export const orderDetails = async (req, res, next) => {
   try {
-    const order = await Order.findById(req.params.id);
     console.log(req.params.id);
+    
+    const order = await Order.findById(req.params.id);
 
     if (!order) return next(new ErrorHandler("Invalid OrderId", 401));
     console.log(order);
