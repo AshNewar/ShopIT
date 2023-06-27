@@ -66,7 +66,7 @@ const schema = new mongoose.Schema({
 //Link with The User Collection ****Very I
   user: {
     type: mongoose.Schema.ObjectId,
-    ref: "User",
+    ref: "user",
     required: true,
   },
 
