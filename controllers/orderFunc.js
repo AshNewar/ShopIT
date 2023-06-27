@@ -110,7 +110,7 @@ export const paymentVerification = TryCatch(async (req, res, next) => {
 });
 
 export const myOrder = TryCatch(async (req, res, next) => {
-  const order = await Order.find({ user: req.user._id });
+  const order = await Order.find({ user: req.user._id }).populate("user", "name");
 
   res.status(201).json({
     success: true,
